@@ -176,3 +176,239 @@
 #lst = ["C","D","A","A","B","B","A"]
 #lst.sort()
 #print(lst)
+
+#LECTURE 4
+
+# dict = {
+#     "name" : "hanoof",
+#     "cgpa" : 9.6,
+#     "marks" : [87,96,74]
+# }
+# print(dict)
+
+# info = {
+#     "name" : "hanoof",
+#     "subjects" : ["linux","sql","git","python"],
+#     "age" : 21,
+#     "is_Adult" : True,
+#     "topics" : ["dict", "set"]
+# }
+# info["name"] = "hanoof_buchh"
+# print(info.get("age"))
+
+# set_1 = {1,2,3,4,5}
+# set_2 = {3,4,5,6,7,8,9,10}
+# print(set_1.union(set_2))
+# print(set_1.intersection(set_2))
+
+# dictionary = {
+#     "table" : ["a piece of furniture","list of facts and figures"],
+#     "cat" : "a small animal"
+
+# }
+# print(dictionary)
+#You are given a list of subjects for students.Assume 1 classroom is required for 1 subject. How many classrooms are needed by all studemnts?
+# subjects = {"python","java","c++","python","javascript","java","python","java","c++","c"}
+# print("classroom needed: ",len(subjects))
+#WAP to enter marks of 3 subjects from the user and store them in a dictionary. Start with an empty dictionary and add one by one. Use subject name as key and marks as value
+# dictionary = {}
+# x = int(input("enter phy: "))
+# dictionary.update({"phy" : x})
+# y = int(input("enter chem: "))
+# dictionary.update({"chem" : y})
+# z = int(input("enter math: "))
+# dictionary.update({"math" : z})
+# print(dictionary)
+
+# i = 0
+# while i<=10:
+#     print("Hello!")
+#     i += 1
+#     print(i)
+
+#loops
+#Print numbers from 1 to 100
+# i = 1
+# while i<=100:
+#     print(i)
+#     i+=1
+
+#Print numbers from 100 to 1
+# i = 100
+# while i>=1:
+#     print(i)
+#     i-=1
+#Print the multiplication table of a number n
+# n = int(input("Enter the number: "))
+# i = 1
+# while i<=10:
+#     print(n*i)
+#     i+=1
+
+#Print the elements of the following list using a loop:
+#[1, 4, 9, 16, 25, 36, 49, 64, 81,100]
+# numbers = [1,4,9,16,25,36,49,64,81,100]
+# i = 0
+# while i<len(numbers):
+#      print(numbers[i])
+#      i+=1
+
+#Search for a number x in this tuple using loop:
+#(1, 4, 9, 16, 25, 36, 49, 64, 81, 100)
+# num = (1, 4, 9, 16, 25, 36, 49, 64, 81, 100)
+# i = 0
+# x = int(input("enter the number you want to  find: "))
+# while i<len(num):
+#     if(num[i]==x):
+#         print("found at index",i)
+#     else:
+#         print("finding...")
+#     i+=1
+# print("end of loop")
+# print 1-10 using loops except 5
+# i = 1
+# while i <=10:
+#     if i==5:
+#         i+=1
+#         continue
+#     print(i)
+#     i+=1
+#WAP to print odd numbers for 1-10
+# i = 1
+# while i <=10:
+#     if i%2==0:
+#         i+=1
+#         continue
+#     print(i)
+#     i+=1
+
+# num = [1,4,9,16,25,36,49,64,81,100]
+# for val in num:
+#     print(val)
+
+# num = (2,4,5,6,7,8,6,5,5,5,4)
+# for val in num:
+#     print(val)
+
+# num = {2,4,5,6,7,8,6,5,5,5,4}
+# for val in num:
+#     print(val)
+
+# str = "Hanoof Buchh"
+# for chr in str:
+#     print(chr)
+
+# x = int(input("enter number: "))
+# num = [1,4,9,16,25,36,49,64,81,100]
+# for val in num:
+#     if(val==x):
+#         print("number found",x)
+#         continue
+#     print(val)
+
+#Print numbers from 1 to 100
+# for i in range(1,100):
+#     print(i)
+
+# Print numbers from 100 to 1
+# for i in range(100,0,-1):
+#     print(i)
+
+# Print the multiplication table of a number n
+# n = int(input("Enter number: "))
+# for i in range(1,11):
+#     print(n*i)
+
+#WAP to find the sum of first n numbers. (using while)
+
+# n = int(input("Enter number: "))
+# sum = 0
+# i = 1
+# while i<=n:
+#     sum +=i
+#     i+=1
+# print("the sum is: ",sum)
+
+# n = int(input("Enter number: "))
+# sum = 0
+# for i in range(n+1):
+#     sum +=i
+# print("the sum is: ",sum)    
+
+#WAP to find the factorial of first n numbers
+# n = int(input("Enter number: "))
+# fact = 1
+# for i in range(1,n+1):
+#     fact*=i
+# print("factorial is: ",fact)
+
+# n = int(input("Enter number: "))
+# fact = 1
+# i = 1
+# while i<=n:
+#     fact*=i
+#     i+=1
+# print("factorial is: ",fact)
+
+# def cal_sum(a,b):
+#     sum = a+b
+#     print(sum)
+
+# def cal_mul(a,b):
+#     mul = a*b
+#     print(mul)
+#     return mul
+
+# def cal_div(a,b):
+#     div = a/b
+#     print(div)
+#     return div
+
+# def cal_sub(a,b):
+#     sub = a-b
+#     print(sub)
+#     return sub
+
+# cal_mul(5,5)
+# cal_sum(5,5)
+# cal_sub(5,5)
+# cal_div(5,5)
+
+# average of 3 numbers
+# def cal_avg(a,b,c):
+#     sum = a+b+c
+#     avg = sum/3
+#     return avg
+# num_1 = int(input("Enter first num: "))
+# num_2 = int(input("Enter second num: "))
+# num_3 = int(input("Enter third num: "))
+# average = cal_avg(num_1,num_2,num_3)
+# print("the average is: ",average)
+ #WAF to print the length of a list
+#def print_list_len(my_list):
+#    print(len(my_list))
+#list = [1,2,3,4,5,6,7,8,9,10]
+#print_list_len(list)
+
+# WAF to print the elements of a list in a single line
+# cities = ["gurgaon","rohtak","srinagar","mohali","delhi"]
+# heroes = ["superman","ironman","thor","hulk","antman","spiderman"]
+
+# def print_elements(list):
+#     for i in list:
+#         print(i,end=" ")
+
+# print_elements(cities)
+# print_elements(heroes)
+
+#WAF to find the factorial of n
+
+#def fact(n):
+#    fact = 1
+#    for i in range(1,n+1):
+#        fact*=i
+#    return fact
+
+#n = int(input("Enter number: "))
+#result = fact(n)
+#print("factorial is: ",result)
