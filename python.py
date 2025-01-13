@@ -463,3 +463,7 @@
 
 #fruits = ["mango","grapes","banana","apple","guava","orange","peach","lichi"]
 #print_list(fruits)
+
+# f = open("data.txt","r")
+# data = f.read()
+# print(data)
