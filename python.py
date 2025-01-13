@@ -454,6 +454,7 @@
 #     return sum(n-1)+ n
 
 # print(sum(5))
+# Write a recursive function to print all the elements in a list. (hint: use list and index as parameters)
 #def print_list(list,idx=0):
 #    if (idx == len(list)):
 #        return
