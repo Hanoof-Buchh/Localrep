@@ -113,3 +113,66 @@
 #     print("Number is a multiple of 7")
 # else:
 #     print("Number is not a multiple of 7")
+
+#LECTURE3
+
+#student = ["Hanoof",12,98.60,"Aman",13,99.90,"Ashaz",14,76.49]
+#print(student[0])
+#print(student[0:3])
+#student.append("aryan")
+
+#List = [2 , 1 , 3 , 4 ]
+# List.append(5)
+#List.sort(reverse=True)
+#print(List)
+
+# List = [4 , 1 , 3 , 2 , 5]
+# List.reverse()
+# print(List)
+
+# List = [4 , 1 , 3 , 2 , 5]
+# List.insert(1,7)
+# print(List)
+
+# List = [4 , 1 , 3 , 2 , 5]
+# List.remove(4)
+# print(List)
+
+# List = [4 , 1 , 3 , 2 , 5]
+# List.pop(2)
+# print(List)
+
+# tup = (1,2,3,4,5,6,7,8,9)
+# print(tup)
+
+# tup = (2 , 4 , 1 , 5 , 9 , 6 , 3)
+# print(tup.index(4))
+
+# tup = (3 , 6 , 1 , 3 , 4 , 7 , 4)
+# print(tup.count(4))
+
+# WAP to ask the user to enter three favourite movies and store them in a list
+# movies = []
+# mov1 = input("enter first movie: ")
+# mov2 = input("enter second movie: ")
+# mov3 = input("enter third movie: ")
+# movies.append(mov1)
+# movies.append(mov2)
+# movies.append(mov3)
+# print(movies)
+
+#WAP to check if a list contains a palindrome of elements. (Hint:- use copy() method)
+#list1 = [1 , 3 , 4 , 5 , 4 , 3 , 1]
+#copy_list1 = list1.copy()
+#copy_list1.reverse()
+#if list1 == copy_list1:
+#    print("palindrome")
+#else:
+#    print("not palindrome")
+# WAP tp count the number of students with the "A" grade in the following tuple
+# tup = ("A" , "B" , "C" , "A" , "A" , "B" , "A")
+# print(tup.count("A"))
+
+#lst = ["C","D","A","A","B","B","A"]
+#lst.sort()
+#print(lst)
