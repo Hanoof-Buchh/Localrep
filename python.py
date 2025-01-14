@@ -475,6 +475,11 @@
 #     data = f.read()
 #     print(data)
 
-with open("demo.txt","w") as f:
-    data = f.write("new data")
-    print(data)
+# with open("demo.txt","w") as f:
+#     data = f.write("new data")
+#     print(data)
+
+# Deleting a file
+open("sample.txt","w") 
+import os
+os.remove("sample.txt")
