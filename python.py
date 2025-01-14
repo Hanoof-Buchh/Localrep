@@ -480,6 +480,65 @@
 #     print(data)
 
 # Deleting a file
-open("sample.txt","w") 
-import os
-os.remove("sample.txt")
+# open("sample.txt","w") 
+# import os
+# os.remove("sample.txt")
+
+#Create a new file "practice.txt" using python. Add the following data in it:
+# Hi everyone
+# we are learning File I/O
+# using java.
+# I like programming in java
+
+# f = open("practice.txt","w")
+# data = f.write("Hi everyone\n we are learning File I/O\n using java.\n I like programming in java ")
+# f.close()
+# Write a function that replaces all occurence of "java" with "python"
+# with open("practice.txt","r") as f:
+#     data = f.read()
+#     new_data = data.replace("java","python")
+#     print(new_data)
+# with open("practice.txt","w") as f:
+#     f.write(new_data)
+
+# Search if the word learning exists in the file or not
+# def check_for_word():
+
+#     word = "learning"
+#     with open("practice.txt","r") as f:
+#         data = f.read()
+#         if (word in data):
+#             print("found")
+#         else:
+#             print("not found")
+# check_for_word()
+# WAF to find in which line of the file does word "learning" occur first. Print -1 if word not found
+# def check_for_line():
+#     word = "learning"
+#     line_no = 1
+#     data = True
+#     with open("practice.txt","r") as f:
+#         while data:
+#             data = f.readline()
+#             if(word in data):
+#                 print(line_no)
+#                 return
+#             line_no +=1
+            
+#     return -1
+# print(check_for_line())
+
+# From a file containing numbers separated by commas, print the count of even numbers.
+count = 0
+with open("practice.txt","r") as f:
+    data = f.read()
+    nums  = data.split(",")
+    for val in nums:
+        if(int(val) % 2 ==0):
+            count +=1
+print(count)
+        
+    
+    
+       
+
