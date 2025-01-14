@@ -467,6 +467,14 @@
 # f = open("data.txt","r")
 # data = f.read()
 # print(data)
-f = open("demo.txt","a")
-data = f.write("\nI play cricket as well")
-print(data)
+# f = open("demo.txt","a")
+# data = f.write("\nI play cricket as well")
+# print(data)
+
+# with open("demo.txt","r") as f:
+#     data = f.read()
+#     print(data)
+
+with open("demo.txt","w") as f:
+    data = f.write("new data")
+    print(data)
