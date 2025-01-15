@@ -653,23 +653,23 @@
 # Create Account class with 2 attributes - balance and account no.
 # Create methods for debit, credit and printing the balance.
 
-class Account():
-    def __init__(self,bal,acc):
-        self.balance = bal
-        self.account_no = acc
-    def debit(self,amount):
-        self.balance = self.balance - amount
-        print("Rs",amount,"was Debited.")
-        print("Current balance",self.get_balance())
+# class Account():
+#     def __init__(self,bal,acc):
+#         self.balance = bal
+#         self.account_no = acc
+#     def debit(self,amount):
+#         self.balance = self.balance - amount
+#         print("Rs",amount,"was Debited.")
+#         print("Current balance",self.get_balance())
 
-    def credit(self,amount):
-        self.balance = self.balance + amount
-        print("Rs",amount,"was Credited.")
-        print("Current balance",self.get_balance())
-    def get_balance(self):
-        return self.balance
+#     def credit(self,amount):
+#         self.balance = self.balance + amount
+#         print("Rs",amount,"was Credited.")
+#         print("Current balance",self.get_balance())
+#     def get_balance(self):
+#         return self.balance
 
-acc1 = Account(15500,1234)
-acc1.debit(500)
-acc1.credit(1000)
-print(acc1.account_no)
+# acc1 = Account(15500,1234)
+# acc1.debit(500)
+# acc1.credit(1000)
+# print(acc1.account_no)
