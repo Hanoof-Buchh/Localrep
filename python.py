@@ -529,16 +529,147 @@
 # print(check_for_line())
 
 # From a file containing numbers separated by commas, print the count of even numbers.
-count = 0
-with open("practice.txt","r") as f:
-    data = f.read()
-    nums  = data.split(",")
-    for val in nums:
-        if(int(val) % 2 ==0):
-            count +=1
-print(count)
+# count = 0
+# with open("practice.txt","r") as f:
+#     data = f.read()
+#     nums  = data.split(",")
+#     for val in nums:
+#         if(int(val) % 2 ==0):
+#             count +=1
+# print(count)
         
-    
-    
-       
+# OOPS 
 
+# class Student():
+#     name = "Hanoof"
+
+# s1 = Student()
+# print(s1.name)
+
+# s2 = Student()
+# print(s2.name)
+
+# class Car():
+#     color = "white"
+#     brand = "mercedes"
+
+# s1 = Car()
+# print(s1.color)
+# print(s1.brand)
+
+# class Student():
+#     #default constructer
+#     def __init__(self):
+#         pass
+#     #parametrized constructer
+#     def __init__(self,name,marks):
+#         self.name = name
+#         self.marks = marks
+#         print("adding new student in database")
+# s1 = Student("Hanoof",92)
+# print(s1.name)
+# print(s1.marks)
+       
+# s2 = Student("Hadiya",99)
+# print(s2.name)
+# print(s2.marks)
+
+#Class & Instance Attributes
+
+# class Student():
+#     College = "CGC LANDRAN"  #Class Attribute
+#     def __init__(self,name,marks):
+#         self.name = name     #Object Attribute
+#         self.marks = marks   #Object Attribute
+# s1 = Student("Hanoof",91)
+# s2 = Student("Ashaz",94)
+# print(s1.name,s1.marks)
+# print(s2.name,s2.marks)
+# print(Student.College)
+
+#Method
+# class Student():
+#     def __init__(self,fullname):
+#         self.name = fullname
+#     def hello(self):
+#         print("hello",self.name)
+
+# s1 = Student("Hanoof")
+# s1.hello()
+
+#Create student class that takes name and marks of 3 subjects as arguments in constructor.
+# Then create a method to print the average
+
+# class Student():
+#     def __init__(self,name,marks):
+#         self.name = name
+#         self.marks = marks
+#     def get_avg(self):
+#         sum = 0
+#         for val in self.marks:
+#             sum += val
+#         print("Hi,",self.name,"your avg score is",sum/3)
+
+# s1 = Student("Hanoof",[96,86,91])
+# s1.get_avg()
+            
+# Static Methods
+# Methods that don't use the self parameter(work at class level)
+
+# class Student():
+#     def __init__(self,name,marks):
+#         self.name = name
+#         self.marks = marks
+
+#     @staticmethod      
+#     def hello():           #Self method
+#         print("hello")
+
+#     def get_avg(self):
+#         sum = 0
+#         for val in self.marks:
+#             sum = sum + val
+#         print("hi",self.name,"your average score is: ",sum/3)
+
+# s1 = Student("hanoof",[91,84,89])
+# s1.get_avg()
+# s1.hello()
+
+#Abstraction
+#Hiding the implementation details of a class and only showing the essential features to the user.
+# class Car():
+#     def __init__(self):
+#         self.acc = False
+#         self.brk = False
+#         self.clutch = False
+#     def start(self):
+#         self.acc = True
+#         self.clutch = True
+#         print("Car has started.....")
+
+# s = Car()
+# s.start()
+
+# Create Account class with 2 attributes - balance and account no.
+# Create methods for debit, credit and printing the balance.
+
+class Account():
+    def __init__(self,bal,acc):
+        self.balance = bal
+        self.account_no = acc
+    def debit(self,amount):
+        self.balance = self.balance - amount
+        print("Rs",amount,"was Debited.")
+        print("Current balance",self.get_balance())
+
+    def credit(self,amount):
+        self.balance = self.balance + amount
+        print("Rs",amount,"was Credited.")
+        print("Current balance",self.get_balance())
+    def get_balance(self):
+        return self.balance
+
+acc1 = Account(15500,1234)
+acc1.debit(500)
+acc1.credit(1000)
+print(acc1.account_no)
