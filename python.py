@@ -673,3 +673,64 @@
 # acc1.debit(500)
 # acc1.credit(1000)
 # print(acc1.account_no)
+
+# del keyword
+
+# class Student():
+#     def __init__(self,name):
+#         self.name = name
+
+# s1 = Student("Hanoof")
+# print(s1.name)
+# del s1
+# print(s1.name)
+
+# Private (like) attributes and methods
+
+# class Account():
+#     def __init__(self,acc_no,acc_pass):
+#         self.acc_no = acc_no
+#         self.__acc_pass = acc_pass     #private attribute
+#     def get_pass(self):
+#         print(self.__acc_pass)
+        
+# s1 = Account(1234,"abcd")
+# print(s1.acc_no)
+# print(s1.get_pass())
+
+# class Person():
+#     __name = "Anonymous"
+
+#     def __hello(self):      #private method
+#         print("hello person")
+
+#     def welcome(self):
+#         self.__hello()
+#         print(self.__name)
+
+# p1 = Person()
+# print(p1.welcome())
+
+# INHERITANCE
+
+class Car():
+    @staticmethod
+    def start():
+        print("car started....")
+    @staticmethod
+    def stop():
+        print("car stopped....")
+
+class ToyotaCar(Car):
+    def __init__(self,name):
+        self.name = name
+c1 = ToyotaCar("Fortuner")
+c2 = ToyotaCar("Innova")
+print(c1.name)
+c1.start()
+c1.stop()
+print(c2.name)
+c2.start()
+c2.stop()
+
+    
