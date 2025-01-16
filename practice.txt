@@ -1,1 +1,73 @@
-1,2,3,43,54,67,53,48,98
+Prometheus
+The flowchart represents the architecture of **Prometheus**, a popular open-source monitoring and alerting toolkit. Here’s a breakdown of the key components and the flow:
+
+### 1. **Prometheus Targets**
+   - **Exporters**: These are agents running on monitored systems to collect metrics. They expose these metrics in a format that Prometheus can scrape.
+   - **Pushgateway**: Used to handle metrics from short-lived jobs. Short-lived jobs cannot be scraped by Prometheus directly, so they push their metrics to the Pushgateway, which holds the data until Prometheus scrapes it.
+
+### 2. **Service Discovery**
+   - Prometheus uses service discovery mechanisms like **Kubernetes** and **EC2** to automatically discover targets (exporters, services, etc.) to scrape metrics from. This avoids manual configuration and helps scale dynamically.
+
+### 3. **Prometheus Core Components**
+   - **Retrieval**: This component is responsible for scraping (pulling) metrics from the targets at regular intervals.
+   - **TSDB (Time Series Database)**: Prometheus stores all the scraped metrics in this time series database for efficient querying and storage.
+   - **HTTP Server**: Exposes an HTTP endpoint for users to query metrics using PromQL (Prometheus Query Language). It serves as the API for accessing stored metrics.
+
+### 4. **PromQL and Visualization**
+   - **PromQL**: This is the query language used to query metrics from Prometheus.
+   - **Prometheus Web UI**: Provides a user interface to visualize metrics and perform queries directly.
+   - **Grafana**: An external visualization tool often used with Prometheus to create detailed dashboards and graphs for better metric visualization.
+
+### 5. **Alerting**
+   - **Alertmanager**: Prometheus can be configured to push alerts to Alertmanager when certain conditions are met (e.g., CPU usage is too high).
+   - **Notification Channels**: Alertmanager sends notifications to various channels like:
+     - Chat applications (e.g., **Chat** icon)
+     - **Email (Gmail)** 
+     - **Slack** or other collaboration tools
+
+### Overall Flow
+1. **Exporters** and **short-lived jobs** collect and expose metrics.
+2. **Pushgateway** stores metrics from short-lived jobs.
+3. **Prometheus** discovers targets via **Service Discovery**.
+4. **Retrieval** pulls metrics from exporters and Pushgateway.
+5. Metrics are stored in **TSDB** and accessible via **HTTP Server**.
+6. Users query metrics using **PromQL** through **Prometheus Web UI** or visualize them using **Grafana**.
+7. **Alertmanager** processes alerts and sends notifications to various channels.
+
+This architecture efficiently handles the collection, storage, querying, and alerting of system metrics, enabling robust monitoring and alerting for various services.
+
+This image explains how **Prometheus** collects metrics from different systems (called targets).
+
+### How Prometheus Collects Metrics:
+1. **HTTP Requests**:
+   - Prometheus gathers metrics by sending HTTP requests to a specific path (`/metrics`) on each target.
+   - The targets are systems or services that provide metrics about their performance (like CPU usage, memory, etc.).
+
+2. **Targets**:
+   - Each target has a `/metrics` endpoint where it exposes its metrics.
+   - Prometheus periodically sends HTTP requests to these endpoints to fetch the data.
+
+3. **Custom Configuration**:
+   - While `/metrics` is the default path, Prometheus can be configured to collect metrics from a different path if necessary.
+
+### Summary:
+Prometheus regularly checks the `/metrics` endpoint of each system it monitors to collect performance data. This process is automatic and can be customized to use other paths if needed.
+
+This image explains the role of **exporters** in Prometheus' monitoring process.
+
+### Key Points:
+
+1. **Why Exporters are Needed**:
+   - Most systems **do not** collect and expose their metrics by default in a way that Prometheus understands. For example, many servers do not automatically provide performance metrics via HTTP requests on a `/metrics` endpoint.
+   
+2. **Role of Exporters**:
+   - **Exporters** are special tools or services that collect metrics from various systems and convert them into a format that Prometheus expects. They then expose these metrics on an HTTP endpoint (typically `/metrics`).
+   - This allows Prometheus to make HTTP requests to these exporters and collect the metrics.
+
+3. **How It Works**:
+   - The **service** (e.g., a server or application) collects data (like CPU usage or memory consumption).
+   - The **exporter** converts the data into a Prometheus-friendly format and makes it available at the `/metrics` endpoint.
+   - Prometheus then makes an HTTP request to the exporter, retrieves the metrics, and stores them for further analysis.
+
+### Summary:
+Since most systems don’t provide metrics by default in a format Prometheus understands, **exporters** are used to collect, convert, and expose those metrics in the required format. Prometheus then collects the metrics by making HTTP requests to these exporters.

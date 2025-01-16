@@ -713,24 +713,95 @@
 
 # INHERITANCE
 
-class Car():
-    @staticmethod
-    def start():
-        print("car started....")
-    @staticmethod
-    def stop():
-        print("car stopped....")
+# class Car():
+#     @staticmethod
+#     def start():
+#         print("car started....")
+#     @staticmethod
+#     def stop():
+#         print("car stopped....")
 
-class ToyotaCar(Car):
-    def __init__(self,name):
-        self.name = name
-c1 = ToyotaCar("Fortuner")
-c2 = ToyotaCar("Innova")
-print(c1.name)
-c1.start()
-c1.stop()
-print(c2.name)
-c2.start()
-c2.stop()
+# class ToyotaCar(Car):
+#     def __init__(self,name):
+#         self.name = name
+# c1 = ToyotaCar("Fortuner")
+# c2 = ToyotaCar("Innova")
+# print(c1.name)
+# c1.start()
+# c1.stop()
+# print(c2.name)
+# c2.start()
+# c2.stop()
+
+# SUPER METHOD
+# class Car():
+#     def __init__(self,type):
+#         self.type = type
+#     @staticmethod
+#     def start():
+#         print("car started....")
+#     @staticmethod
+#     def stop():
+#         print("car stopped....")
+
+# class Toyotacar(Car):
+#     def __init__(self,name,type):
+#         self.name = name
+#         super().__init__(type)
+#         super().start()
+#         super().stop()
+# c1 = Toyotacar("Fortuner","deisel")
+# print(c1.name)
+# print(c1.type)
+  
+# CLASS METHOD
+# class Person:
+#     name = "Anonymous"
+#     @classmethod
+#     def change_name(self,name):
+#         self.name = name
+
+# n1 = Person()
+# n1.change_name("hanoof")
+# print(n1.name)
+# print(Person.name)
+
+# PROPERTY METHOD
+# class Student():
+#     def __init__(self,phy,chem,math):
+#         self.phy = phy
+#         self.chem = chem
+#         self.math = math
+        
+#     @property
+#     def percentage(self):
+#         return str((self.phy+self.chem+self.math)/3) + "%"
+
+# s1 = Student(98,87,84)
+# print (s1.percentage)
+# s1.math = 92
+# print(s1.percentage)
+
+# POLYMORPHISM
+
+class Complex:
+    def __init__(self,real,img):
+        self.real = real
+        self.img = img
+
+    def shownumber(self):
+        print(self.real,"i","+",self.img,"j")
+
+    def add(self,num):
+        newReal = self.real + n2.real
+        newImg = self.img + n2.img
+        return Complex(newReal,newImg)
+
+n1 = Complex(2,4)
+n1.shownumber()
+n2 = Complex(5,6)
+n2.shownumber()
+n3 = n1.add(n2)
+n3.shownumber()
 
     
