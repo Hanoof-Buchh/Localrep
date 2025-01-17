@@ -908,6 +908,3 @@
 #     password += random.choice(char)
 # print("your random password is: ",password)
 
-mylist = ['apple', 'banana', 'cherry']
-mylist[0] = 'kiwi'
-print(mylist[1])
