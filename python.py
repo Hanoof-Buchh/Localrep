@@ -784,24 +784,130 @@
 
 # POLYMORPHISM
 
-class Complex:
-    def __init__(self,real,img):
-        self.real = real
-        self.img = img
+# class Complex:
+#     def __init__(self,real,img):
+#         self.real = real
+#         self.img = img
 
-    def shownumber(self):
-        print(self.real,"i","+",self.img,"j")
+#     def shownumber(self):
+#         print(self.real,"i","+",self.img,"j")
 
-    def add(self,num):
-        newReal = self.real + n2.real
-        newImg = self.img + n2.img
-        return Complex(newReal,newImg)
-
-n1 = Complex(2,4)
-n1.shownumber()
-n2 = Complex(5,6)
-n2.shownumber()
-n3 = n1.add(n2)
-n3.shownumber()
-
+#     def __add__(self,num2):              #dunder function
+#         newReal = self.real + num2.real
+#         newImg = self.img + num2.img
+#         return Complex(newReal,newImg)
     
+#     def __sub__(self,num2):              #dunder function
+#         newReal = self.real - num2.real
+#         newImg = self.img - num2.img
+#         return Complex(newReal,newImg)
+    
+# n1 = Complex(2,4)
+# n1.shownumber()
+# n2 = Complex(5,6)
+# n2.shownumber()
+# n3 = n1 + n2
+# n3.shownumber()
+# n4 = n1 - n2
+# n4.shownumber()
+
+# Define a Circle class to create a class with radius r using construstor.
+# Define an area() method of the class which calculates the area of the circle.
+# Define a perimeter method of a class which allows you to calculate the perimeter of the circle.
+
+# class Circle:
+#     def __init__(self,radius):
+#         self.radius = radius
+#         print("radius of a circle: ",radius)
+
+#     def area(self):
+#         area = (22/7)*self.radius**2
+#         print("The area of the circle is: ",area)
+
+#     def parameter(self):
+#         parameter = 2*(22/7)*self.radius
+#         print("The parameter of the circle is: ",parameter)
+
+# c1 = Circle(21)
+# c1.area()
+# c1.parameter()
+
+# Define an employee class with attributes role,department and salary. This class also has a showDetail() method.
+# create an engineer class that inherits the property from employee and has attributes: name & age
+
+# class Employee:
+#     def __init__(self,role,department,salary):
+#         self.role = role
+#         self.department = department
+#         self.salary = salary
+
+#     def showDetails(self):
+#         print("Role = ",self.role)
+#         print("Department = ",self.department)
+#         print("Salary = ",self.salary)
+
+# class Engineer(Employee):
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+#         super().__init__("Engineer","IT","50000")
+
+# e2 = Engineer("Hanoof",21)
+# e2.showDetails()
+
+# Create a class called order which stores item and its price.
+# use dunder function __gt__() to convey that:
+# order1 > order2 if price of order1 > order2
+
+# class Order:
+#     def __init__(self,item,price):
+#         self.item = item
+#         self.price = price
+
+#     def __gt__(self,odr2):
+#         return self.price > odr2.price
+    
+# odr1 = Order("Apple",50)
+# odr2 = Order("Banana",20)
+# print(odr1>odr2)
+    
+# WAP to develop a game called guess the number
+
+# import random
+# target = random.randint(1,100)
+
+# while True:
+#     user_choice = input("Guess the number or Quit(Q): ")
+#     if (user_choice == "Q"):
+#         break
+#     user_choice = int(user_choice)
+#     if(user_choice == target):    
+#         print("You have guessed the correct number....")
+#         break
+#     elif(user_choice > target):
+#         print("number too large \nchoose smaller number")
+#     else:
+#         print("number too small \nchoose bigger number")
+# print("----GAME ENDED----")
+
+# create a random password generator
+
+# import random
+# import string
+
+# char = string.ascii_letters + string.digits + string.punctuation
+
+# pass_len = 12
+# password = ""
+
+#list comprehension [function for i in range(n)]
+# password = "".join([(random.choice(char)) for i in range(pass_len)])
+# print(password)
+
+# for i in range (pass_len):
+#     password += random.choice(char)
+# print("your random password is: ",password)
+
+mylist = ['apple', 'banana', 'cherry']
+mylist[0] = 'kiwi'
+print(mylist[1])
